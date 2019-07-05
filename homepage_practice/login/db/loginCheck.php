@@ -14,6 +14,7 @@ if ($result->num_rows == 1) {
     if ($row['userPwd'] == $loginPwd) {
         $_SESSION['userId'] = $row['userId'];
         $_SESSION['userName'] = $row['userName'];
+        ;
         if (isset($_SESSION['userId'])) {
             echo "<script>location.href=' ../../index.php';</script>";
         } else {

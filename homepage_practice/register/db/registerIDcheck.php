@@ -1,15 +1,15 @@
 <?php
-include '../../db/db.php';
 $userId = $_POST['userId'];
 
-$sql = "select * from userInfo where userId='" . $userId . "'";
+$sql = mq("select * from userInfo where userId='" . $userId . "'");
 
-$member = mysqli_query($db, $sql);
-if (!$row = mysqli_fetch_array($member)) {
+$member = $sql->fetch_array();
+if ($member == 0) {
     echo $userId.'は使用できます。';
 ?>
 	<script>
 	$('#idCheckMsg').css('color', '#df42ec');
+	removeDisabled();
 	</script>
 <?php
 } else {

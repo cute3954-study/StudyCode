@@ -1,5 +1,4 @@
 <?php
-include '../../db/db.php';
 $sql = "select * from regionInfo";
 
 $result = mysqli_query($db, $sql);
