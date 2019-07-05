@@ -119,7 +119,6 @@ a:focus, a:hover {
 .header_topw3layouts_bar {
 	background: rgba(4, 4, 4, 0.45);
 }
-
 .header_agileits_left ul li, .header_agileits_left ul li a {
 	display: inline-block;
 	font-size: 15px;
@@ -234,7 +233,7 @@ ul.navbar-nav.ml-auto {
 
 /* banner */
 .bannerbg-w3l {
-	background: url(../images/1.jpg) no-repeat 0px 0px;
+	background: #4f4f4f 0px 0px;
 	background-size: cover;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;

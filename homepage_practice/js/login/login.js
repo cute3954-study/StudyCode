@@ -39,20 +39,17 @@ function loginPwdCheck() {
 function pwdVisibleLogin() {
 	var pwdtextlogin = $('#pwdVisLogin').text();
 	if (pwdtextlogin == '表示') {
-		$('#pwdVisLogin').click(function() {
 			$('#loginPwd').attr('type', 'text');
 			$('#pwdVisLogin').text('非表示');
 			$('#pwdVisLogin').css('background-color', '#ff3b44');
 			$('#pwdVisLogin').css('border', '1px solid #ff3b44');
 			$('#pwdVisLogin').css('color', 'white');
-		})
+
 	} else {
-		$('#pwdVisLogin').click(function() {
 			$('#loginPwd').attr('type', 'password');
 			$('#pwdVisLogin').text('表示');
 			$('#pwdVisLogin').css('background-color', 'white');
 			$('#pwdVisLogin').css('border', '1px solid #ff3b44');
 			$('#pwdVisLogin').css('color', '#ff3b44');
-		})
 	}
 }

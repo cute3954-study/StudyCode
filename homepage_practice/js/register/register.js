@@ -51,7 +51,6 @@ function passwordCheck() {
 				attrDisabled();
 			} else {
 				$('#pwdCheckMsg').html("");
-				removeDisabled();
 			}
 		}
 	}
@@ -60,41 +59,44 @@ function passwordCheck() {
 function pwdVisible1() {
 	var pwdtext1 = $('#pwdVis1').text();
 	if (pwdtext1 == '表示') {
-		$('#pwdVis1').click(function() {
-			$('#userPwd1').attr('type', 'text');
-			$('#pwdVis1').text('非表示');
-			$('#pwdVis1').css('background-color', '#ff3b44');
-			$('#pwdVis1').css('border', '1px solid #ff3b44');
-			$('#pwdVis1').css('color', 'white');
-		})
+		$('#userPwd1').attr('type', 'text');
+		$('#pwdVis1').text('非表示');
+		$('#pwdVis1').css('background-color', '#ff3b44');
+		$('#pwdVis1').css('border', '1px solid #ff3b44');
+		$('#pwdVis1').css('color', 'white');
 	} else {
-		$('#pwdVis1').click(function() {
-			$('#userPwd1').attr('type', 'password');
-			$('#pwdVis1').text('表示');
-			$('#pwdVis1').css('background-color', 'white');
-			$('#pwdVis1').css('border', '1px solid #ff3b44');
-			$('#pwdVis1').css('color', '#ff3b44');
-		})
+		$('#userPwd1').attr('type', 'password');
+		$('#pwdVis1').text('表示');
+		$('#pwdVis1').css('background-color', 'white');
+		$('#pwdVis1').css('border', '1px solid #ff3b44');
+		$('#pwdVis1').css('color', '#ff3b44');
 	}
 }
 function pwdVisible2() {
 	var pwdtext2 = $('#pwdVis2').text();
 	if (pwdtext2 == '表示') {
-		$('#pwdVis2').click(function() {
-			$('#userPwd2').attr('type', 'text');
-			$('#pwdVis2').text('非表示');
-			$('#pwdVis2').css('background-color', '#ff3b44');
-			$('#pwdVis2').css('border', '1px solid #ff3b44');
-			$('#pwdVis2').css('color', 'white');
-		})
+		$('#userPwd2').attr('type', 'text');
+		$('#pwdVis2').text('非表示');
+		$('#pwdVis2').css('background-color', '#ff3b44');
+		$('#pwdVis2').css('border', '1px solid #ff3b44');
+		$('#pwdVis2').css('color', 'white');
 	} else {
-		$('#pwdVis2').click(function() {
-			$('#userPwd2').attr('type', 'password');
-			$('#pwdVis2').text('表示');
-			$('#pwdVis2').css('background-color', 'white');
-			$('#pwdVis2').css('border', '1px solid #ff3b44');
-			$('#pwdVis2').css('color', '#ff3b44');
-		})
+		$('#userPwd2').attr('type', 'password');
+		$('#pwdVis2').text('表示');
+		$('#pwdVis2').css('background-color', 'white');
+		$('#pwdVis2').css('border', '1px solid #ff3b44');
+		$('#pwdVis2').css('color', '#ff3b44');
+	}
+}
+
+function nameCheck() {
+	var userName = $('#userName').val();
+	if (userName == null || userName == "") {
+		$('#nameCheckMsg').html("お名前を入力してください。");
+		$('#nameCheckMsg').css('color', '#ff3c41');
+		attrDisabled();
+	} else {
+		$('#nameCheckMsg').html("");
 	}
 }
 
@@ -110,7 +112,6 @@ $(document).ready(function() {
 	for (var i = 1; i <= 31; i++) {
 		$('#userDay').append('<option value="' + i + '">' + i + '</option>');
 	}
-
 });
 
 function birthCheck() {
@@ -119,7 +120,6 @@ function birthCheck() {
 	userDay = $('#userDay option:selected').val();
 	if (userYear != '0' && userMonth != '0' && userDay != '0') {
 		$('#birthCheckMsg').html("");
-		removeDisabled();
 	} else {
 		$('#birthCheckMsg').html("生年月日を指定してください。");
 		attrDisabled();

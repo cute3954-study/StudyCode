@@ -111,7 +111,7 @@
 									href="index.php">トップ<span class="sr-only">(current)</span>
 								</a></li>
 								<li class="nav-item dropdown mx-lg-3"><a
-									class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+									class="nav-link dropdown-toggle" href="list/borrowSearch.php" id="navbarDropdown"
 									role="button" data-toggle="dropdown" aria-haspopup="true"
 									aria-expanded="false">賃貸</a>
 									<div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -125,15 +125,15 @@
 									class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 									role="button" data-toggle="dropdown" aria-haspopup="true"
 									aria-expanded="false">購入</a>
-									<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-										<a class="dropdown-item scroll" href="list/house.php">新築マンション</a>
-										<a class="dropdown-item scroll" href="#pricings">中古マンション</a>
+									<div class="dropdown-menu" aria-labelledby="navbarDropdown" class='buyHouse'>
+										<a class="dropdown-item scroll active" href="#" id="新築マンション" onclick="location.href='list/newHouse.php'">新築マンション</a>
+										<a class="dropdown-item scroll" href="#pricings" id="中古マンション">中古マンション</a>
 										<div class="dropdown-divider"></div>
-										<a class="dropdown-item scroll" href="#clients">新規一戸建て</a> <a
-											class="dropdown-item" href="about.html">中古一戸建て</a>
+										<a class="dropdown-item scroll" href="#clients" id="新規一戸建て">新規一戸建て</a> <a
+											class="dropdown-item" href="about.html" id="中古一戸建て">中古一戸建て</a>
 										<div class="dropdown-divider"></div>
-										<a class="dropdown-item" href="about.html">注文住宅</a> <a
-											class="dropdown-item" href="about.html">土地</a>
+										<a class="dropdown-item" href="about.html" id="注文住宅">注文住宅</a> <a
+											class="dropdown-item" href="about.html" id="土地">土地</a>
 									</div></li>
 								<li class="nav-item mx-xl-4 mx-lg-3 my-lg-0 my-3"><a
 									class="nav-link" href="about.html">販売</a></li>
@@ -219,9 +219,9 @@
 						<form action="register/db/registerMember.php" method="post">
 							<div class="form-group" class="bors">
 								<button type="button" class="btn buyorsell" data-toggle="button"
-									aria-pressed="false" value="false">購買者</button>
+									aria-pressed="false" value="購買者">購買者</button>
 								<button type="button" class="btn buyorsell" data-toggle="button"
-									aria-pressed="false" value="true">販売者</button>
+									aria-pressed="false" value="販売者">販売者</button>
 							</div>
 							<div class="form-group">
 								<font class="msg" id="idCheckMsg"></font> <input type="text"
@@ -239,8 +239,9 @@
 									type="button" onclick="pwdVisible2();">表示</button>
 							</div>
 							<div class="form-group">
-								<input type="text" class="form-control" name="userName"
-									placeholder="名前" id="userName" maxlength="30">
+								<font class="msg" id="nameCheckMsg"></font> <input type="text"
+									class="form-control" name="userName" placeholder="名前"
+									id="userName" maxlength="30" onkeyup="nameCheck();">
 							</div>
 							<div class="form-group" id="userBirth">
 								<select id="userYear" onchange="birthCheck();"><option value="0">----</option></select>年
@@ -283,19 +284,26 @@
 	<!-- banner-bottom -->
 	<div class="serach-w3agile py-5" id="searchArea">
 		<div class="container py-xl-4 py-lg-3">
-			<h3 class="title-w3ls mb-md-5 mb-4 font-weight-bold" align="center">キーワードから探す
-				- 全国</h3>
-			<div class="regionSelect" align="center">
-				<span><a href="#">全国</a></span><?php
-    include_once 'list/db/regionSepAll.php';
-    ?></div>
+			<h3 class="title-w3ls mb-md-5 mb-4 font-weight-bold"
+				id="selectRegionName" align="center">キーワードから探す - 全国</h3>
 			<div class="place-grids">
 				<form action="#" method="post">
 					<div class="row">
-						<div class="col-sm-5 col-6 place-grid">
-							<input type="text" class="form-control"
-								placeholder="物件名、 路線名、 駅名などを入力" id="searchList"
-								onkeyup="searchCheck();">
+						<div class="col-sm-2 col-6 place-grid mt-sm-0 mt-3"
+							style="margin: 0 !important;">
+							<select class="sel" id="regionSelect">
+								<option id="------" class="noSelect" selected="selected">------</option>
+								<option id="全国">全国</option>
+								<?php
+        include_once 'list/db/regionSepAll.php';
+        ?>
+							</select>
+						</div>
+						<div class="col-sm-2 col-6 place-grid mt-sm-0 mt-3"
+							style="margin: 0 !important;">
+							<select class="sel" id="reregionSelect">
+								<option value="------" class="noSelect" selected="selected">------</option>
+							</select>
 						</div>
 						<div class="col-sm-3 col-6 place-grid">
 							<select class="sel">
@@ -307,16 +315,12 @@
 								<option value="">賃貸住宅</option>
 							</select>
 						</div>
-						<div class="col-sm-2 col-6 place-grid mt-sm-0 mt-3"
-							style="margin: 0 !important;">
-							<select class="sel">
-								<option value="0" class="noSelect" selected="selected">------</option>
-								<?php
-        include_once 'list/db/regionListAll.php';
-        ?>
-							</select>
+						<div class="col-sm-4 col-6 place-grid">
+							<input type="text" class="form-control"
+								placeholder="物件名、 路線名、 駅名などを入力" id="searchList"
+								onkeyup="searchCheck();">
 						</div>
-						<div class="col-sm-2 col-6 place-grid">
+						<div class="col-sm-1 col-6 place-grid">
 							<button type="submit" disabled="disabled"
 								class="btn btn-primary submit padding_sub mb-4" id="searchBtn">検索</button>
 						</div>
