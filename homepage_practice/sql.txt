@@ -80,3 +80,32 @@ CREATE TABLE `houseKindInfo` (
 PRIMARY KEY(`houseSeq`, `houseKind`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+CREATE TABLE `houseInfo` (
+  `houseSeq` int(11) NOT NULL AUTO_INCREMENT,
+  `houseName` varchar(50) NOT NULL,
+  `housePriceMin` int(20) NOT NULL,
+  `housePriceMax` int(20) NOT NULL,
+  `houseAdd1` varchar(100) NOT NULL,
+  `houseAdd2` varchar(100) NOT NULL,
+  `houseAdd3` varchar(100) NOT NULL,
+  `houseAdd4` varchar(100) NOT NULL,
+`houseTraffic` varchar(100) NOT NULL,
+  `houseSpace` varchar(15) NOT NULL,
+  `houseAreaMin` int(10) NOT NULL,
+  `houseAreaMax` int(10) NOT NULL,
+  `housePeriodYear` int(10) NOT NULL,
+  `housePeriodMonth` int(10) NOT NULL,
+`houseText` varchar(1000) NOT NULL,
+`houseImg` varchar(500) NOT NULL,
+PRIMARY KEY(`houseSeq`, `houseName`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+insert into houseInfo (houseName, housePriceMin, housePriceMax, houseAdd1, houseAdd2, houseAdd3, houseAdd4, houseTraffic, houseSpace, houseAreaMin, houseAreaMax, housePeriodYear, housePeriodMonth, houseText, houseImg)
+value('デュオヴェール札幌北大前グレイス', 2000, 3900, '北海道', '札幌市', '北区', '十二条西三丁目2番（地番）', '札幌市営地下鉄南北線 「北１２条」駅 徒歩2分 ', '第1期1次 1LDK・2LDK ', 33, 55, 2020, 09, '第1期1次モデルルームOPEN<br>
+［1LDK・2LDK中心］働く女性のための都市型コンパクトマンション<br>
+「デュオヴェール札幌北大前グレイス」誕生<br>
+ ［収納充実・1LDK］ 2,000万円台～、月々5万円台～<br>
+ 札幌市営地下鉄南北線「北12条」駅徒歩2分、「札幌」駅徒歩7分（札幌駅北口地下歩道13番出口）、「北海道大学」徒歩4分。', 'apartment-architectural-design-architecture-1115804.jpg');
+
+insert into houseInfo (houseName, housePriceMin, housePriceMax, houseAdd1, houseAdd2, houseAdd3, houseAdd4, houseTraffic, houseSpace, houseAreaMin, houseAreaMax, housePeriodYear, housePeriodMonth, houseText, houseImg)
+value('アルビオ・ガーデン麻生', 2930, 3250, '北海道', '札幌市', '北区', '北37条西3丁目305-1（地番）', '札幌市営地下鉄南北線 「麻生」駅 徒歩6分 ', '第1期 2LDK・3LDK ', 62, 74, 2019, 08, '南向きのワイドな窓から射し込む陽光が、フローリングに美し映えるリビング・ダイニング。', 'texture-1245701_1920.jpg');

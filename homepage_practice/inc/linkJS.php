@@ -43,9 +43,13 @@
 	<!--  necessary snippets for few javascript files -->
 	<script src="../js/district.js"></script>
 
-	<script src="../js/bootstrap.js"></script>
-
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
+	<!-- jQuery-Photo-filter-lightbox-Gallery-plugin -->
+	<script src="../js/jquery-1.7.2.js"></script>
+	<script src="../js/jquery.quicksand.js"></script>
+	<script src="../js/script.js"></script>
+	<script src="../js/jquery.prettyPhoto.js"></script>
+	<!-- //jQuery-Photo-filter-lightbox-Gallery-plugin -->
 	<!-- Necessary-JavaScript-File-For-Bootstrap -->
 	<!-- //Js files -->

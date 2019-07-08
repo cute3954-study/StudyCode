@@ -20,18 +20,9 @@ function searchCheck() {
 	}
 }
 
-	var hmAry = new Array();
-	hmAry[0] = $("#新築マンション").val();
-	hmAry[1] = $("#中古マンション").val();
-	hmAry[2] = $("#新規一戸建て").val();
-	hmAry[3] = $("#中古一戸建て").val();
-	hmAry[4] = $("#注文住宅").val();
-	hmAry[5] = $("#土地").val();
-	for (var i = 0; i < hmAry.length; i++) {
-//		hmAry[i].click(function() {
-//
-//		});
-	}
+$("#新築マンション").click(function() {
+	$('#topMsg').innerHTML("新築マンション");
+});
 
 function regionChange() {
 	$('#regionSelect').change(regionPart);

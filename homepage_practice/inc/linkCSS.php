@@ -1,7 +1,9 @@
 <!-- Custom-Files -->
 <link rel="stylesheet" href="../css/bootstrap.css">
 <!-- Bootstrap-Core-CSS -->
-<link rel="stylesheet" href="../css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="../css/style.css" type="text/css"
+	media="all" />
+<link href="../css/prettyPhoto.css" rel="stylesheet" type="text/css">
 <!-- Style-CSS -->
 <link rel="stylesheet" href="../css/fontawesome-all.css">
 <!-- Font-Awesome-Icons-CSS -->
@@ -21,3 +23,12 @@
 <link href="https://fonts.googleapis.com/css?family=Kosugi&display=swap"
 	rel="stylesheet">
 <!-- //Web-Fonts -->
+<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+		</script>

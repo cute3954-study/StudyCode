@@ -4,7 +4,8 @@
 <head>
 <title>まるまる不動産</title>
 <!-- Meta tag Keywords -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1"
+	CONTENT="no-cache">
 <meta charset="UTF-8" />
 <meta name="keywords"
 	content="District Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
@@ -111,11 +112,11 @@
 									href="index.php">トップ<span class="sr-only">(current)</span>
 								</a></li>
 								<li class="nav-item dropdown mx-lg-3"><a
-									class="nav-link dropdown-toggle" href="list/borrowSearch.php" id="navbarDropdown"
-									role="button" data-toggle="dropdown" aria-haspopup="true"
-									aria-expanded="false">賃貸</a>
+									class="nav-link dropdown-toggle" href="list/borrowSearch.php"
+									id="navbarDropdown" role="button" data-toggle="dropdown"
+									aria-haspopup="true" aria-expanded="false">賃貸</a>
 									<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-										<a class="dropdown-item scroll" href="list/house.php">賃貸住宅</a>
+										<a class="dropdown-item scroll" href="list/newHouse.php">賃貸住宅</a>
 										<a class="dropdown-item scroll" href="#pricings">賃貸事務所</a> <a
 											class="dropdown-item scroll" href="#clients">賃貸店舗</a> <a
 											class="dropdown-item" href="about.html">賃貸駐車場</a> <a
@@ -125,19 +126,31 @@
 									class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 									role="button" data-toggle="dropdown" aria-haspopup="true"
 									aria-expanded="false">購入</a>
-									<div class="dropdown-menu" aria-labelledby="navbarDropdown" class='buyHouse'>
-										<a class="dropdown-item scroll active" href="#" id="新築マンション" onclick="location.href='list/newHouse.php'">新築マンション</a>
-										<a class="dropdown-item scroll" href="#pricings" id="中古マンション">中古マンション</a>
+									<div class="dropdown-menu" aria-labelledby="navbarDropdown"
+										class='buyHouse'>
+										<a class="dropdown-item scroll active" href="#" id="新築マンション"
+											name="houseChk" onclick="location.href='list/newHouse.php'">新築マンション</a>
+										<a class="dropdown-item scroll" href="#" id="中古マンション"
+											name="houseChk" onclick="location.href='list/oldHouse.php'">中古マンション</a>
 										<div class="dropdown-divider"></div>
-										<a class="dropdown-item scroll" href="#clients" id="新規一戸建て">新規一戸建て</a> <a
-											class="dropdown-item" href="about.html" id="中古一戸建て">中古一戸建て</a>
+										<a class="dropdown-item scroll" name="houseChk" href="#"
+											id="新規一戸建て" onclick="location.href='list/resultList.php'">新規一戸建て</a>
+										<a class="dropdown-item" name="houseChk" href="about.html"
+											id="中古一戸建て">中古一戸建て</a>
 										<div class="dropdown-divider"></div>
-										<a class="dropdown-item" href="about.html" id="注文住宅">注文住宅</a> <a
-											class="dropdown-item" href="about.html" id="土地">土地</a>
+										<a class="dropdown-item" name="houseChk" href="about.html"
+											id="注文住宅">注文住宅</a> <a class="dropdown-item" name="houseChk"
+											href="about.html" id="土地">土地</a>
 									</div></li>
 								<li class="nav-item mx-xl-4 mx-lg-3 my-lg-0 my-3"><a
 									class="nav-link" href="about.html">販売</a></li>
+									<?php
+        if (isset($_SESSION['userId']) && isset($_SESSION['userName'])) {
+            ?>
 								<li class="nav-item"><a class="nav-link" href="contact.html">マイページ</a></li>
+								<?php
+        }
+        ?>
 							</ul>
 						</div>
 					</nav>
