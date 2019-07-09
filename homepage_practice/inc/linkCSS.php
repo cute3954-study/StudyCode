@@ -1,11 +1,11 @@
 <!-- Custom-Files -->
-<link rel="stylesheet" href="../css/bootstrap.css">
+<link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT']?>/homepage_practice/css/bootstrap.css">
 <!-- Bootstrap-Core-CSS -->
-<link rel="stylesheet" href="../css/style.css" type="text/css"
+<link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT']?>/homepage_practice/css/style.css" type="text/css"
 	media="all" />
-<link href="../css/prettyPhoto.css" rel="stylesheet" type="text/css">
+<link href="<?php $_SERVER['DOCUMENT_ROOT']?>/homepage_practice/css/prettyPhoto.css" rel="stylesheet" type="text/css">
 <!-- Style-CSS -->
-<link rel="stylesheet" href="../css/fontawesome-all.css">
+<link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT']?>/homepage_practice/css/fontawesome-all.css">
 <!-- Font-Awesome-Icons-CSS -->
 <!-- //Custom-Files -->
 

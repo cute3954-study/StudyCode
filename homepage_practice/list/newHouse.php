@@ -8,23 +8,23 @@
 <meta name="keywords"
 	content="District Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <?php
-include '../inc/linkCSS.php';
+include $_SERVER['DOCUMENT_ROOT'].'/homepage_practice/inc/linkCSS.php';
 ?>
 </head>
 <head>
 <body>
 <?php
-include '../inc/header.php';
-include '../inc/searchForm.php';
+include $_SERVER['DOCUMENT_ROOT'].'/homepage_practice/inc/header.php';
+include $_SERVER['DOCUMENT_ROOT'].'/homepage_practice/inc/searchForm.php';
 ?>
 <div class="col">
 		<div class="row mapArea">
 			<div class="col-12 col-md-6 col-lg-5" align="center">
 				<div class="card">
 				<?php
-    include_once 'db/regionSepAll_Map.php';
+				include_once $_SERVER['DOCUMENT_ROOT'].'/homepage_practice/list/db/regionSepAll_Map.php';
     ?>
-					<img class="map_img" src="../images/japanese_archipelago-1.png"
+					<img class="map_img" src="<?php $_SERVER['DOCUMENT_ROOT']?>/homepage_practice/images/japanese_archipelago-1.png"
 						alt="Card image cap">
 				</div>
 			</div>
@@ -101,6 +101,6 @@ include '../inc/searchForm.php';
 
 </body>
 <?php
-include '../inc/linkJS.php';
+include $_SERVER['DOCUMENT_ROOT'].'/homepage_practice/inc/linkJS.php';
 ?>
 </html>

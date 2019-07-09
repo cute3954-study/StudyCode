@@ -7,11 +7,4 @@ $mysql_port = '3306';
 
 $db = new mysqli($mysql_hostname, $mysql_username, $mysql_password, $mysql_database, $mysql_port);
 $db->set_charset("utf8");
-
-// function mq($sql)
-// {
-//     global $db;
-//     return $db->query($sql);
-// }
-
 ?>

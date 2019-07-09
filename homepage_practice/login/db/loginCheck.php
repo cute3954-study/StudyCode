@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../../db/db.php';
+include $_SERVER['DOCUMENT_ROOT'].'/homepage_practice/db/db.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $loginId = $_POST['loginId'];
     $loginPwd = $_POST['loginPwd'];
@@ -15,7 +15,7 @@ if ($result->num_rows == 1) {
         $_SESSION['userId'] = $row['userId'];
         $_SESSION['userName'] = $row['userName'];
         if (isset($_SESSION['userId'])) {
-            echo "<script>location.href=' ../../index.php';</script>";
+            echo "<script>location.href='/homepage_practice/index.php';</script>";
         } else {
             echo "세션 저장 실패";
         }

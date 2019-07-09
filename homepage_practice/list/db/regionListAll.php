@@ -1,5 +1,5 @@
 <?php
-include '../../db/db.php';
+include $_SERVER['DOCUMENT_ROOT'].'/homepage_practice/db/db.php';
 $sql = "select * from regionInfo";
 
 $result = mysqli_query($db, $sql);

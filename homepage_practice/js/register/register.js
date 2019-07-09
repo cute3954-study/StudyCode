@@ -19,7 +19,7 @@ function idCheck() {
 		attrDisabled();
 	} else {
 		$.ajax({
-			url : 'register/db/registerIDcheck.php',
+			url : '/homepage_practice/register/db/registerIDcheck.php',
 			type : 'POST',
 			data : {
 				'userId' : userId
@@ -126,56 +126,72 @@ function birthCheck() {
 	}
 }
 
+$("#userEmail")
+		.on(
+				"change paste keyup",
+				function() {
+					var userEmail = $('#userEmail').val();
+					var emailExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+					if (userEmail == null || userEmail == "") {
+						$('#emailCheckMsg').html("メールアドレスを入力してください。");
+						$('#mailCheckBtn').attr('disabled', 'disabled');
+						attrDisabled();
+					} else if (!emailExp.test(userEmail)) {
+						$('#emailCheckMsg').html("正しいメールアドレスを入力してください。");
+						$('#mailCheckBtn').attr('disabled', 'disabled');
+						attrDisabled();
+					} else {
+						$('#emailCheckMsg').html("");
+						$('#mailCheckBtn').removeAttr('disabled');
+					}
+				});
+
 function mailCheck() {
-	var userEmail = $('#userEmail').val();
-	var emailExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
-	if (userEmail == null || userEmail == "") {
-		$('#emailCheckMsg').html("メールアドレスを入力してください。");
-		attrDisabled();
-	} else if (!emailExp.test(userEmail)) {
-		$('#emailCheckMsg').html("正しいメールアドレスを入力してください。");
-		attrDisabled();
-	} else {
-		$('#emailCheckMsg').html("");
-		var width = 350;
-		var height = 150;
-		var winL = (screen.width - width) / 2;
-		var winT = (screen.height - height) / 2;
-		var property = "width=" + width + ",height=" + height + ",left=" + winL
-				+ ",top" + winT + "menubar = no";
-		window.open("register/authMail.php?to=" + $('#userEmail').val(), "認証",
-				property);
-	}
+	location.href = '/homepage_practice/register/sendMail.php';
+
 }
 
 function mailNumberCheck() {
 
 }
 
+$('#userPost').on("change paste keyup", function() {
+	var zipExp = /^[0-9]/gi;
+	var userZip = $('#userPost').val();
+	if (!zipExp.test(userZip)) {
+		$('#postCheckMsg').html("郵便番号が数字だけで入力してください。");
+		$('#zipcodeCheckBtn').attr('disabled', 'disabled');
+	} else {
+		$('#postCheckMsg').html("");
+		$('#zipcodeCheckBtn').removeAttr('disabled');
+	}
+});
+
 function setAddress() {
-	var userPost = $('#userPost').val();
+	var userPost = {
+		zipcode : $('#userPost').val()
+	};
 	$.ajax({
 		type : 'get',
-		url : 'https://maps.googleapis.com/maps/api/geocode/json',
-		crossDomain : true,
-		dataType : 'json',
-		data : {
-			address : userPost,
-			language : 'ja',
-			sensor : false
-		},
-		success : function(data) {
-			if (data.status == "OK") {
-				var obj = data.results[0].address_components;
-				if (obj.length < 5) {
-					$('#postCheckMsg').html("正しい郵便番号を入力してください。");
-					attrDisabled();
-				} else {
-					$('#postCheckMsg').html("");
-					$('#userAdd1').val(obj[3]['long_name']);
-					$('#userAdd2').val(obj[2]['long_name']);
-					$('#userAdd3').val(obj[1]['long_name']);
+		cache : false,
+		url : 'http://zipcloud.ibsnet.co.jp/api/search',
+		dataType : 'jsonp',
+		data : userPost,
+		success : function(res) {
+			if (res.status == 200) {
+				var add1='';
+				var add2='';
+				var add3='';
+				for (var i = 0; i < res.results.length; i++) {
+					var result = res.results[i];
+					console.log(res.results);
+					add1 += result.address1;
+					add2 += result.address2;
+					add3 += result.address3;
 				}
+				$('#userAdd1').html(add1);
+				$('#userAdd2').html(add2);
+				$('#userAdd3').html(add3);
 			}
 		}
 	})

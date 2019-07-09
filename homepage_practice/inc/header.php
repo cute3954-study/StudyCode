@@ -36,7 +36,7 @@
         $userName = $_SESSION['userName'];
         ?>
 									<a href="#"> <i class="fas fa-user mr-2"></i>こんにちは、<?php echo $userName."(".$userId.")"?>さん！&nbsp;&nbsp;
-									</a> <a href="login/logout.php"> <i class="fas fa-key mr-2"></i>ログアウト
+									</a> <a href="<?php $_SERVER['DOCUMENT_ROOT']?>/homepage_practice/login/logout.php"> <i class="fas fa-key mr-2"></i>ログアウト
 								</a>
 
 							<?php } ?>
@@ -48,7 +48,7 @@
 
 				<!-- navigation -->
 				<nav class="navbar navbar-expand-lg navbar-light bg-light">
-					<a class="navbar-brand" href="../index.php">まるまる不動産 </a>
+					<a class="navbar-brand" href="<?php $_SERVER['DOCUMENT_ROOT']?>/homepage_practice/index.php">まるまる不動産 </a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse"
 						data-target="#navbarSupportedContent"
 						aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -79,11 +79,11 @@
 								<div class="dropdown-menu" aria-labelledby="navbarDropdown"
 									id="">
 									<a class="dropdown-item scroll" href="#"
-										onclick="location.href='../list/newHouse.php'">新築マンション</a> <a
-										class="dropdown-item scroll" href="../list/oldHouse.php">中古マンション</a>
+										onclick="location.href='<?php $_SERVER['DOCUMENT_ROOT']?>/homepage_practice/list/newHouse.php'">新築マンション</a> <a
+										class="dropdown-item scroll" href="<?php $_SERVER['DOCUMENT_ROOT']?>/homepage_practice/list/oldHouse.php">中古マンション</a>
 									<div class="dropdown-divider"></div>
 									<a class="dropdown-item scroll" href="#"
-										onclick="location.href='../list/resultList.php'">新規一戸建て</a> <a
+										onclick="location.href='<?php $_SERVER['DOCUMENT_ROOT']?>/homepage_practice/list/resultList.php'">新規一戸建て</a> <a
 										class="dropdown-item" href="about.html">中古一戸建て</a>
 									<div class="dropdown-divider"></div>
 									<a class="dropdown-item" href="about.html">注文住宅</a> <a
@@ -110,7 +110,7 @@
 	<div class="banner-w3ltext about-w3bnr">
 		<div class="container">
 			<h1 class="text-white text-center">
-				<a href="../index.php">トップ</a> / <font id="topMsg"></font>
+				<a href="<?php $_SERVER['DOCUMENT_ROOT']?>/homepage_practice/index.php">トップ</a> / <font id="topMsg"></font>
 			</h1>
 		</div>
 	</div>

@@ -268,12 +268,12 @@
 									class="form-control inputWidth" name="userEmail"
 									placeholder="メールアドレス" id="userEmail" onchange="attrDisabled();">
 								<button class="btn btn-primary submit bu_w"
-									onclick="mailCheck();" type="button">メール送信</button>
+									onclick="mailCheck();" type="button" id="mailCheckBtn" disabled="disabled">メール送信</button>
 								<font class="msg" id="postCheckMsg"></font> <input type="text"
 									class="form-control inputWidth" name="userPost"
-									placeholder="郵便番号" id="userPost">
-								<button class="btn btn-primary submit bu_w" type="button"
-									onclick="setAddress();">住所取得</button>
+									placeholder="郵便番号" id="userPost" maxlength="7">
+								<button class="btn btn-primary submit bu_w" id="zipcodeCheckBtn" type="button"
+									onclick="setAddress();" disabled="disabled">住所取得</button>
 								<input type="text" class="form-control" name="userAdd1"
 									placeholder="都道府県" id="userAdd1"> <input type="text"
 									class="form-control" name="userAdd2" placeholder="市区町村"

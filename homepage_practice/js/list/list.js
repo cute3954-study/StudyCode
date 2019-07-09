@@ -31,11 +31,11 @@ function regionChange() {
 function regionPart() {
 	var regionSep = $('#regionSelect option:selected').val();
 	if (regionSep != '全国' && regionSep != '------') {
-		$.get('list/db/regionPartCheck.php?regionSep=' + regionSep,
+		$.get('/homepage_practice/list/db/regionPartCheck.php?regionSep=' + regionSep,
 				show_reregion);
 	} else if (regionSep == '全国') {
 		$
-				.get('list/db/regionListAll.php?regionSep=' + regionSep,
+				.get('/homepage_practice/list/db/regionListAll.php?regionSep=' + regionSep,
 						show_reregion);
 	} else if (regionSep == '------') {
 		$('#reregionSelect')

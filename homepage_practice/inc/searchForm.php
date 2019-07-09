@@ -11,8 +11,8 @@
 							<option id="------" class="noSelect" selected="selected">------</option>
 							<option id="全国">全国</option>
 								<?php
-        include '../db/db.php';
-        include_once 'db/regionSepAll.php';
+        include $_SERVER['DOCUMENT_ROOT'].'/homepage_practice/db/db.php';
+        include $_SERVER['DOCUMENT_ROOT'].'/homepage_practice/list/db/regionSepAll.php';
         ?>
 							</select>
 					</div>

@@ -8,13 +8,13 @@
 <meta name="keywords"
 	content="District Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <?php
-include '../inc/linkCSS.php';
+include $_SERVER['DOCUMENT_ROOT'].'/homepage_practice/inc/linkCSS.php';
 ?>
 </head>
 <head>
 <body>
 <?php
-include '../inc/header.php';
+include $_SERVER['DOCUMENT_ROOT'].'/homepage_practice/inc/header.php';
 ?>
 <div class="container">
     <div class="row resultList">
@@ -42,7 +42,7 @@ include '../inc/header.php';
         <div class="col">
             <div class="row">
             <?php
-                include 'db/resultList.php';
+            include $_SERVER['DOCUMENT_ROOT'].'/homepage_practice/list/db/resultList.php';
             ?>
                 <div class="col-12">
                     <nav aria-label="...">
@@ -68,6 +68,6 @@ include '../inc/header.php';
 </div>
 </body>
 <?php
-include '../inc/linkJS.php';
+include $_SERVER['DOCUMENT_ROOT'].'/homepage_practice/inc/linkJS.php';
 ?>
 </html>
