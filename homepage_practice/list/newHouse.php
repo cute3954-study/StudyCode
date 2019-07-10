@@ -98,9 +98,8 @@ include $_SERVER['DOCUMENT_ROOT'].'/homepage_practice/inc/searchForm.php';
 		</p>
 	</div>
 	<!-- //copyright -->
-
-</body>
 <?php
 include $_SERVER['DOCUMENT_ROOT'].'/homepage_practice/inc/linkJS.php';
 ?>
+</body>
 </html>

@@ -18,31 +18,9 @@
 		window.scrollTo(0, 1);
 	}
 </script>
-<!--// Meta tag Keywords -->
-
-<!-- Custom-Files -->
-<link rel="stylesheet" href="css/bootstrap.css">
-<!-- Bootstrap-Core-CSS -->
-<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
-<!-- Style-CSS -->
-<link rel="stylesheet" href="css/fontawesome-all.css">
-<!-- Font-Awesome-Icons-CSS -->
-<!-- //Custom-Files -->
-
-<!-- Web-Fonts -->
-<link
-	href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
-	rel="stylesheet">
-<link
-	href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
-	rel="stylesheet">
-<!-- Japanese -->
-<link
-	href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap"
-	rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Kosugi&display=swap"
-	rel="stylesheet">
-<!-- //Web-Fonts -->
+<?php
+include $_SERVER['DOCUMENT_ROOT'] . '/homepage_practice/inc/linkCSS.php';
+?>
 </head>
 
 <body>
@@ -129,12 +107,12 @@
 									<div class="dropdown-menu" aria-labelledby="navbarDropdown"
 										class='buyHouse'>
 										<a class="dropdown-item scroll active" href="#" id="新築マンション"
-											name="houseChk" onclick="location.href='list/newHouse.php'">新築マンション</a>
+											onclick="location.href='/homepage_practice/list/newHouse.php'">新築マンション</a>
 										<a class="dropdown-item scroll" href="#" id="中古マンション"
-											name="houseChk" onclick="location.href='list/oldHouse.php'">中古マンション</a>
+											onclick="location.href='/homepage_practice/list/oldHouse.php'">中古マンション</a>
 										<div class="dropdown-divider"></div>
-										<a class="dropdown-item scroll" name="houseChk" href="#"
-											id="新規一戸建て" onclick="location.href='list/resultList.php'">新規一戸建て</a>
+										<a class="dropdown-item scroll" href="#" id="新規一戸建て"
+											onclick="location.href='/homepage_practice/list/newHouse.php'">新規一戸建て</a>
 										<a class="dropdown-item" name="houseChk" href="about.html"
 											id="中古一戸建て">中古一戸建て</a>
 										<div class="dropdown-divider"></div>
@@ -172,126 +150,12 @@
 		</div>
 		<!-- //banner text -->
 	</div>
-	<!-- login -->
-	<div class="modal fade" id="exampleModalCenter1" tabindex="-1"
-		role="dialog" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered" role="document">
-			<div class="modal-content">
-				<div class="modal-header text-center">
-					<button type="button" class="close" data-dismiss="modal"
-						aria-label="Close">
-						<span aria-hidden="true" class="closeBtn">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<div class="login px-4 mx-auto mw-100">
-						<h5 class="text-center mb-4">ログイン</h5>
-						<form action="login/db/loginCheck.php" method="post">
-							<div class="form-group">
-								<font class="msg" id="idLoginCheckMsg"></font> <input
-									type="text" class="form-control" name="loginId"
-									placeholder="ID" id="loginId" onkeyup="loginIdCheck();">
-							</div>
-							<div class="form-group">
-								<font class="msg" id="pwdLoginCheckMsg"></font> <input
-									type="password" class="form-control inputWidth" name="loginPwd"
-									placeholder="パスワード" id="loginPwd" onkeyup="loginPwdCheck();">
-								<button class="btn btn-primary pwdVisible bu_w" id="pwdVisLogin"
-									type="button" onclick="pwdVisibleLogin();">表示</button>
-							</div>
-							<button type="submit" class="btn btn-primary submit mb-4"
-								id="loginbtn" disabled="disabled">ログイン</button>
-							<p class="text-center pb-4">
-								<a href="#">IDもしくはパスワードを忘れた方はこちら</a>
-							</p>
-							<p class="text-center pb-4">
-								<a href="#" data-toggle="modal"
-									data-target="#exampleModalCenter2">新規登録</a>
-							</p>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- //login -->
-	<!-- register -->
-	<div class="modal fade" id="exampleModalCenter2" tabindex="-1"
-		role="dialog" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered" role="document">
-			<div class="modal-content">
-				<div class="modal-header text-center">
-					<button type="button" class="close" data-dismiss="modal"
-						aria-label="Close">
-						<span aria-hidden="true" class="closeBtn">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<div class="login px-4 mx-auto mw-100">
-						<h5 class="text-center mb-4">まるまる不動産へようこそ！</h5>
-						<form action="register/db/registerMember.php" method="post">
-							<div class="form-group" class="bors">
-								<button type="button" class="btn buyorsell" data-toggle="button"
-									aria-pressed="false" value="購買者">購買者</button>
-								<button type="button" class="btn buyorsell" data-toggle="button"
-									aria-pressed="false" value="販売者">販売者</button>
-							</div>
-							<div class="form-group">
-								<font class="msg" id="idCheckMsg"></font> <input type="text"
-									class="form-control" name="userId" placeholder="ID" id="userId"
-									maxlength="20" onkeyup="idCheck();"> <font class="msg"
-									id="pwdCheckMsg"></font> <input type="password"
-									class="form-control inputWidth" name="userPwd1" id="userPwd1"
-									placeholder="パスワード" onkeyup="passwordCheck();" maxlength="20">
-								<button class="btn btn-primary pwdVisible bu_w" id="pwdVis1"
-									type="button" onclick="pwdVisible1();">表示</button>
-								<input type="password" class="form-control inputWidth"
-									name="userPwd2" id="userPwd2" placeholder="パスワード確認"
-									onkeyup="passwordCheck();" maxlength="20">
-								<button class="btn btn-primary pwdVisible bu_w" id="pwdVis2"
-									type="button" onclick="pwdVisible2();">表示</button>
-							</div>
-							<div class="form-group">
-								<font class="msg" id="nameCheckMsg"></font> <input type="text"
-									class="form-control" name="userName" placeholder="名前"
-									id="userName" maxlength="30" onkeyup="nameCheck();">
-							</div>
-							<div class="form-group" id="userBirth">
-								<select id="userYear" onchange="birthCheck();"><option value="0">----</option></select>年
-								<select id="userMonth" onchange="birthCheck();"><option
-										value="0">--</option></select>月 <select id="userDay"
-									onchange="birthCheck();"><option value="0">--</option></select>日
-								<font class="msg" id="birthCheckMsg">生年月日を指定してください。</font>
-							</div>
-							<div class="form-group">
-								<font class="msg" id="emailCheckMsg"></font> <input type="text"
-									class="form-control inputWidth" name="userEmail"
-									placeholder="メールアドレス" id="userEmail" onchange="attrDisabled();">
-								<button class="btn btn-primary submit bu_w"
-									onclick="mailCheck();" type="button" id="mailCheckBtn" disabled="disabled">メール送信</button>
-								<font class="msg" id="postCheckMsg"></font> <input type="text"
-									class="form-control inputWidth" name="userPost"
-									placeholder="郵便番号" id="userPost" maxlength="7">
-								<button class="btn btn-primary submit bu_w" id="zipcodeCheckBtn" type="button"
-									onclick="setAddress();" disabled="disabled">住所取得</button>
-								<input type="text" class="form-control" name="userAdd1"
-									placeholder="都道府県" id="userAdd1"> <input type="text"
-									class="form-control" name="userAdd2" placeholder="市区町村"
-									id="userAdd2"> <input type="text" class="form-control"
-									name="userAdd3" placeholder="番地" id="userAdd3"> <input
-									type="text" class="form-control" name="userAdd4"
-									placeholder="建物名・部屋番号" id="userAdd4">
-							</div>
-							<button type="submit" id="registerbtn"
-								class="btn btn-primary submit padding_sub mb-4"
-								disabled="disabled">会員登録</button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--//register-->
+	<?php
+include $_SERVER['DOCUMENT_ROOT'] . '/homepage_practice/inc/login.php';
+?>
+<?php
+include $_SERVER['DOCUMENT_ROOT'] . '/homepage_practice/inc/register.php';
+?>
 	<!-- //banner -->
 
 	<!-- banner-bottom -->
@@ -300,36 +164,36 @@
 			<h3 class="title-w3ls mb-md-5 mb-4 font-weight-bold"
 				id="selectRegionName" align="center">キーワードから探す - 全国</h3>
 			<div class="place-grids">
-				<form action="#" method="post">
+				<form action="/homepage_practice/list/resultList.php" method="post">
 					<div class="row">
 						<div class="col-sm-2 col-6 place-grid mt-sm-0 mt-3"
 							style="margin: 0 !important;">
-							<select class="sel" id="regionSelect">
+							<select class="sel" id="regionSelect" name="regionSelect">
 								<option id="------" class="noSelect" selected="selected">------</option>
 								<option id="全国">全国</option>
 								<?php
-        include_once 'list/db/regionSepAll.php';
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/homepage_practice/list/db/regionSepAll.php';
         ?>
 							</select>
 						</div>
 						<div class="col-sm-2 col-6 place-grid mt-sm-0 mt-3"
 							style="margin: 0 !important;">
-							<select class="sel" id="reregionSelect">
+							<select class="sel" id="reregionSelect" name="reregionSelect">
 								<option value="------" class="noSelect" selected="selected">------</option>
 							</select>
 						</div>
 						<div class="col-sm-3 col-6 place-grid">
-							<select class="sel">
-								<option value="" selected="selected">新築マンション</option>
-								<option value="">新築一戸建て</option>
-								<option value="">中古マンション</option>
-								<option value="">中古一戸建て</option>
-								<option value="">土地</option>
-								<option value="">賃貸住宅</option>
+							<select class="sel" name="houseKind">
+								<option value="新築マンション" selected="selected">新築マンション</option>
+								<option value="新築一戸建て">新築一戸建て</option>
+								<option value="中古マンション">中古マンション</option>
+								<option value="中古一戸建て">中古一戸建て</option>
+								<option value="土地">土地</option>
+								<option value="賃貸住宅">賃貸住宅</option>
 							</select>
 						</div>
 						<div class="col-sm-4 col-6 place-grid">
-							<input type="text" class="form-control"
+							<input type="text" class="form-control" name="searchKeyword"
 								placeholder="物件名、 路線名、 駅名などを入力" id="searchList"
 								onkeyup="searchCheck();">
 						</div>
@@ -398,172 +262,6 @@
 	</div>
 	<!-- //middle section -->
 
-	<!-- services -->
-	<div class="what-w3ls py-5" id="services">
-		<div class="container py-xl-5 py-lg-3">
-			<div class="text-center mb-md-5 mb-4">
-				<h3 class="tittle mb-sm-2">Our Services</h3>
-				<p>Some words about our property services</p>
-			</div>
-			<div class="what-grids">
-				<div class="row">
-					<div class="col-md-6 what-grid1">
-						<div class="row what-top">
-							<div class="col-2 what-left">
-								<i class="fas fa-key"></i>
-							</div>
-							<div class="col-10 what-right">
-								<h4>Renting Service</h4>
-								<p class="mt-2">Consectetur adipisicing elit. Ab aut dignissimos
-									ea est, laboriosam consectetur adipisicing elit.</p>
-							</div>
-						</div>
-						<div class="row what-top my-md-5 my-4">
-							<div class="col-2 what-left">
-								<i class="far fa-money-bill-alt"></i>
-							</div>
-							<div class="col-10 what-right">
-								<h4>Saling Service</h4>
-								<p class="mt-2">Consectetur adipisicing elit. Ab aut dignissimos
-									ea est, laboriosam consectetur adipisicing elit.</p>
-							</div>
-						</div>
-						<div class="row what-top">
-							<div class="col-2 what-left">
-								<i class="fas fa-user-secret"></i>
-							</div>
-							<div class="col-10 what-right">
-								<h4>Non Stop Security</h4>
-								<p class="mt-2">Consectetur adipisicing elit. Ab aut dignissimos
-									ea est, laboriosam consectetur adipisicing elit.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 what-grid1 my-md-0 my-4">
-						<div class="row what-top">
-							<div class="col-2 what-left">
-								<i class="far fa-building"></i>
-							</div>
-							<div class="col-10 what-right">
-								<h4>Property Management</h4>
-								<p class="mt-2">Consectetur adipisicing elit. Ab aut dignissimos
-									ea est, laboriosam consectetur adipisicing elit.</p>
-							</div>
-						</div>
-						<div class="row what-top my-md-5 my-4">
-							<div class="col-2 what-left">
-								<i class="fas fa-clipboard-list"></i>
-							</div>
-							<div class="col-10 what-right">
-								<h4>Property Listing</h4>
-								<p class="mt-2">Consectetur adipisicing elit. Ab aut dignissimos
-									ea est, laboriosam consectetur adipisicing elit.</p>
-							</div>
-						</div>
-						<div class="row what-top">
-							<div class="col-2 what-left">
-								<i class="fas fa-wrench"></i>
-							</div>
-							<div class="col-10 what-right">
-								<h4>Luxurious Fittings</h4>
-								<p class="mt-2">Consectetur adipisicing elit. Ab aut dignissimos
-									ea est, laboriosam consectetur adipisicing elit.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- //services -->
-
-	<!-- pricing -->
-	<section class="pricing py-5" id="pricings">
-		<div class="container py-xl-5 py-lg-3">
-			<div class="text-center mb-lg-5 mb-4">
-				<h3 class="tittle mb-2 text-white">Our Pricings</h3>
-				<p class="test-title-paara">A few word about our Planes</p>
-			</div>
-			<div class="inner-sec">
-				<div class="card-deck text-center row mt-5">
-					<div class="price-info-grid col-lg-4">
-						<div class="price-inner">
-							<div class="price-header">
-								<h4>Starter</h4>
-							</div>
-							<div class="price-body">
-								<h5 class="pricing-title">
-									<span class="dolor">$</span> 789.00 <label>Per Month</label>
-
-								</h5>
-
-								<ul class="list-unstyled mt-3 mb-4">
-									<li class="py-2 border-bottom">Advertising</li>
-									<li class="py-2 border-bottom">Branding Services</li>
-									<li class="py-2 border-bottom">Online Marketing</li>
-									<li class="py-2 border-bottom">Creative Marketing</li>
-									<li class="py-2">-</li>
-								</ul>
-								<a href="#" class="btn btn-block py-2" data-toggle="modal"
-									data-target="#exampleModalCenter2"> <i class="far fa-user"></i>
-									Get Started
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="price-info-grid col-lg-4 my-lg-0 my-3">
-						<div class="price-inner">
-							<div class="price-header">
-								<h4>Professional</h4>
-							</div>
-							<div class="price-body">
-								<h5 class="pricing-title">
-									<span class="dolor">$</span>1089.00 <label>Per Month</label>
-								</h5>
-								<ul class="list-unstyled mt-3 mb-4">
-									<li class="py-2 border-bottom">Advertising</li>
-									<li class="py-2 border-bottom">Branding Services</li>
-									<li class="py-2 border-bottom">Online Marketing</li>
-									<li class="py-2 border-bottom">Creative Marketing</li>
-									<li class="py-2">-</li>
-								</ul>
-								<a href="#" class="btn btn-block btn-outline-primary py-2"
-									data-toggle="modal" data-target="#exampleModalCenter2"> <i
-									class="far fa-user"></i> Get Started
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="price-info-grid col-lg-4">
-						<div class="price-inner">
-							<div class="price-header">
-								<h4>Enterprise</h4>
-							</div>
-							<div class="price-body">
-								<h5 class="pricing-title">
-									<span class="dolor">$</span>2189.00 <label>Per Month</label>
-
-								</h5>
-								<ul class="list-unstyled mt-3 mb-4">
-									<li class="py-2 border-bottom">Advertising</li>
-									<li class="py-2 border-bottom">Branding Services</li>
-									<li class="py-2 border-bottom">Online Marketing</li>
-									<li class="py-2 border-bottom">Creative Marketing</li>
-									<li class="py-2">-</li>
-								</ul>
-								<a href="#" class="btn btn-block btn-outline-primary py-2"
-									data-toggle="modal" data-target="#exampleModalCenter2"> <i
-									class="far fa-user"></i> Get Started
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- //pricing -->
-
 	<!-- stats section -->
 	<div class="middlesection-agile py-5">
 		<div class="container-fluid py-xl-5 py-lg-3">
@@ -599,102 +297,6 @@
 		</div>
 	</div>
 	<!-- //stats -->
-
-	<!-- testimonials -->
-	<div class="testimonials py-5" id="clients">
-		<div class="container py-xl-5 py-lg-3">
-			<div class="text-center mb-lg-5 mb-4">
-				<h3 class="tittle mb-2 text-white">What Clients Say</h3>
-				<p class="test-title-paara">A few word about our Clients</p>
-			</div>
-			<div class="w3_testimonials_grids">
-				<section class="slider">
-					<div class="flexslider">
-						<ul class="slides">
-							<li>
-								<div class="w3_testimonials_grid">
-									<p>"Nam Cumque nihil impedit quo minuslibero tempore, nihil
-										impedit quo minus id quod possimus, Nam Cumque nihil impedit
-										quo minuslibero tempore, cum soluta nobis est eligendi optio
-										cumque nihil impedit omnis voluptas".</p>
-									<ul class="testi-w3ls-rate mt-4">
-										<li><i class="fas fa-star"></i></li>
-										<li class="mx-2"><i class="fas fa-star"></i></li>
-										<li><i class="fas fa-star"></i></li>
-										<li class="mx-2"><i class="fas fa-star"></i></li>
-										<li><i class="fas fa-star"></i></li>
-									</ul>
-									<div class="row person-w3ls-testi mt-5">
-										<div class="col-6 agile-left-test text-right">
-											<img src="images/te1.jpg" alt=" "
-												class="img-fluid rounded-circle" />
-										</div>
-										<div class="col-6 agile-right-test text-left mt-4">
-											<h5>John Frank</h5>
-											<p>Tempore Quo</p>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="w3_testimonials_grid">
-									<p>"Nam Cumque nihil impedit quo minuslibero tempore, nihil
-										impedit quo minus id quod possimus, Nam Cumque nihil impedit
-										quo minuslibero tempore, cum soluta nobis est eligendi optio
-										cumque nihil impedit omnis voluptas".</p>
-									<ul class="testi-w3ls-rate mt-4">
-										<li><i class="fas fa-star"></i></li>
-										<li class="mx-2"><i class="fas fa-star"></i></li>
-										<li><i class="fas fa-star"></i></li>
-										<li class="mx-2"><i class="fas fa-star"></i></li>
-										<li><i class="fas fa-star"></i></li>
-									</ul>
-									<div class="row person-w3ls-testi mt-5">
-										<div class="col-6 agile-left-test text-right">
-											<img src="images/te2.jpg" alt=" "
-												class="img-fluid rounded-circle" />
-										</div>
-										<div class="col-6 agile-right-test text-left mt-4">
-											<h5>John Frank</h5>
-											<p>Tempore Quo</p>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="w3_testimonials_grid">
-									<p>"Nam Cumque nihil impedit quo minuslibero tempore, nihil
-										impedit quo minus id quod possimus, Nam Cumque nihil impedit
-										quo minuslibero tempore, cum soluta nobis est eligendi optio
-										cumque nihil impedit omnis voluptas".</p>
-									<ul class="testi-w3ls-rate mt-4">
-										<li><i class="fas fa-star"></i></li>
-										<li class="mx-2"><i class="fas fa-star"></i></li>
-										<li><i class="fas fa-star"></i></li>
-										<li class="mx-2"><i class="fas fa-star"></i></li>
-										<li><i class="fas fa-star"></i></li>
-									</ul>
-									<div class="row person-w3ls-testi mt-5">
-										<div class="col-6 agile-left-test text-right">
-											<img src="images/te3.jpg" alt=" "
-												class="img-fluid rounded-circle" />
-										</div>
-										<div class="col-6 agile-right-test text-left mt-4">
-											<h5>John Frank</h5>
-											<p>Tempore Quo</p>
-										</div>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</section>
-
-			</div>
-		</div>
-	</div>
-	<!-- //testimonials -->
-
 	<!-- footer top -->
 	<div class="footer-top py-5 text-center">
 		<div class="container py-xl-5 py-lg-3">
@@ -763,59 +365,8 @@
 		</p>
 	</div>
 	<!-- //copyright -->
-
-
-	<!-- Js files -->
-	<!-- JavaScript -->
-	<script src="js/jquery-2.2.3.min.js"></script>
-	<!-- Default-JavaScript-File -->
-	<script src="js/bootstrap.js"></script>
-	<!-- Necessary-JavaScript-File-For-Bootstrap -->
-
-	<!-- flexSlider (for testimonials) -->
-	<link rel="stylesheet" href="css/flexslider.css" type="text/css"
-		media="screen" />
-	<script defer src="js/jquery.flexslider.js"></script>
-	<script>
-		$(window).load(function() {
-			$('.flexslider').flexslider({
-				animation : "slide",
-				start : function(slider) {
-					$('body').removeClass('loading');
-				}
-			});
-		});
-	</script>
-	<!-- //flexSlider (for testimonials) -->
-
-	<!-- stats -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<script src="js/jquery.countup.js"></script>
-	<script>
-		$('.counter').countUp();
-	</script>
-	<!-- //stats -->
-	<script src="js/common.js"></script>
-	<script src="js/list/list.js"></script>
-	<script src="js/login/login.js"></script>
-	<script src="js/register/register.js"></script>
-	<!-- smooth scrolling -->
-	<script src="js/SmoothScroll.min.js"></script>
-	<!-- //smooth scrolling -->
-
-	<!-- move-top -->
-	<script src="js/move-top.js"></script>
-	<!-- easing -->
-	<script src="js/easing.js"></script>
-	<!--  necessary snippets for few javascript files -->
-	<script src="js/district.js"></script>
-
-	<script src="js/bootstrap.js"></script>
-
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-
-	<!-- Necessary-JavaScript-File-For-Bootstrap -->
-	<!-- //Js files -->
-
+<?php
+include $_SERVER['DOCUMENT_ROOT'] . '/homepage_practice/inc/linkJS.php';
+?>
 </body>
 </html>

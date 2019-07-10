@@ -53,3 +53,34 @@ function show_reregion(res) {
 	$('#reregionSelect').html(res);
 }
 $(document).ready(regionChange);
+
+// backbone.js 練習--------------------------
+(function($) {
+	var houseInformation = Backbone.Model.extend({
+		defaults:{
+			houseSeq = "1",
+			houseSep = "1",
+			houseName = "1",
+			housePriceMin = "1",
+			housePriceMax = "1",
+			houseAdd1 = "1",
+			houseAdd2 = "1",
+			houseAdd3 = "1",
+			houseAdd4 = "1",
+			houseTraffic = "1",
+			houseSpace = "1",
+			houseAreaMin = "1",
+			houseAreaMax = "1",
+			housePeriodYear = "1",
+			housePeriodMonth = "1",
+			houseText = "1",
+			houseKind = "1",
+			houseImg = "apartment-architectural-design-architecture-1115804.jpg"
+		}
+	});
+	var houseInfoView = Backbone.View.extend({
+		tagName:"div",
+		className: "card-body",
+		template: $("#").html();
+	});
+})(jQuery);

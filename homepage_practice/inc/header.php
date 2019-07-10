@@ -79,11 +79,11 @@
 								<div class="dropdown-menu" aria-labelledby="navbarDropdown"
 									id="">
 									<a class="dropdown-item scroll" href="#"
-										onclick="location.href='<?php $_SERVER['DOCUMENT_ROOT']?>/homepage_practice/list/newHouse.php'">新築マンション</a> <a
-										class="dropdown-item scroll" href="<?php $_SERVER['DOCUMENT_ROOT']?>/homepage_practice/list/oldHouse.php">中古マンション</a>
+										onclick="location.href='/homepage_practice/list/newHouse.php'">新築マンション</a> <a
+										class="dropdown-item scroll" href="/homepage_practice/list/oldHouse.php">中古マンション</a>
 									<div class="dropdown-divider"></div>
 									<a class="dropdown-item scroll" href="#"
-										onclick="location.href='<?php $_SERVER['DOCUMENT_ROOT']?>/homepage_practice/list/resultList.php'">新規一戸建て</a> <a
+										onclick="location.href='/homepage_practice/list/newHouse.php'">新規一戸建て</a> <a
 										class="dropdown-item" href="about.html">中古一戸建て</a>
 									<div class="dropdown-divider"></div>
 									<a class="dropdown-item" href="about.html">注文住宅</a> <a

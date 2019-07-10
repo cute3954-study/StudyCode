@@ -397,115 +397,6 @@ h3.title-w3ls {
 }
 /* //middle section */
 
-/* services */
-h3.tittle {
-	color: #000;
-	font-size: 38px;
-	font-weight: 700;
-}
-
-.what-right h4 {
-	font-size: 23px;
-	color: #000;
-	font-weight: 500;
-}
-
-.what-left i {
-	font-size: 34px;
-	color: #ff3c41;
-}
-
-/* //services */
-
-/* pricing */
-.pricing {
-	background: url(../images/bb2.jpg) no-repeat bottom;
-	background-size: cover;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	-moz-background-size: cover;
-}
-
-.price-header .pricing-card-title span {
-	font-size: .5em;
-	display: inline-block;
-	color: #000;
-}
-
-.price-header h4 {
-	color: #f7f7f7;
-	font-size: 1.4em;
-}
-
-.price-header {
-	padding: 3.5em 0;
-	background: url(../images/bg3.jpg) no-repeat bottom;
-	background-size: cover;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	-moz-background-size: cover;
-}
-
-.price-body {
-	padding: 2.25em;
-}
-
-.news-gd small.text-muted {
-	font-size: 0.85em;
-	font-weight: 500;
-}
-
-ul.list-unstyled li {
-	font-size: 16px;
-	letter-spacing: 1px;
-	color: #7d7d7d;
-}
-
-.pricing-section h5.card-title {
-	font-size: 2em;
-	color: #000;
-	font-weight: 500;
-}
-
-.price-inner {
-	background-color: #fff;
-}
-
-.price-body a.btn-block {
-	color: #fff;
-	background-color: #0e0f10;
-	background-image: none;
-	border: none;
-	font-size: 16px;
-	letter-spacing: 1px;
-}
-
-.card-deck .card {
-	padding: 0px;
-}
-
-h5.pricing-title {
-	font-size: 2em;
-	color: #000;
-	font-weight: 500;
-}
-
-h5.pricing-title span.dolor {
-	color: #888;
-	font-weight: 100;
-	vertical-align: super;
-}
-
-h5.pricing-title label {
-	font-size: 14px;
-	display: block;
-	color: #0ebeff;
-	font-weight: 300;
-	letter-spacing: 1px;
-}
-
 /* register */
 .modal-body h5 {
 	color: #ff3b44;
@@ -642,6 +533,15 @@ input {
 	line-height: 1.25em;
 	height: 3.6em;
 }
+
+.lastProduct_title {
+	background-color: #ff3b44;
+	border: 1px solid #ff3b44;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	color: white;
+}
+
 /* stats section */
 .aboutright-agilewthree {
 	padding: 1em 3em 0em 7em;
@@ -814,48 +714,6 @@ p
 a {
 	color: #7c848c;
 }
-
-/* social-icons footer */
-.w3social-icons-footer
-
-ul
-
-li {
-	display: inline-block;
-}
-
-.w3social-icons-footer
-
-ul
-
-li
-
-a {
-	color: #000;
-	font-size: 20px;
-	display: block;
-	width: 50px;
-	height: 50px;
-	text-align: center;
-	line-height: 2.4;
-	border: 2px solid #ff3c41;
-}
-
-.w3social-icons-footer
-
-ul
-
-li
-
-a
-:hover {
-	color: #ff3c41;
-	-webkit-box-shadow: 0px 0px 13px 2px #ff3c41;
-	-moz-box-shadow: 0px 0px 13px 2px #ff3c41;
-	box-shadow: 0px 0px 13px 2px #ff3c41;
-}
-
-/*//social-icons footer */
 
 /* //footer */
 
@@ -1872,66 +1730,6 @@ p.para-text-w3ls {
 }
 
 /* // stats section */
-
-/* testimonials */
-.testimonials {
-	background: url(../images/bg2.jpg) no-repeat right;
-	background-size: cover;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	-ms-background-size: cover;
-	background-attachment: fixed;
-}
-
-p.test-title-paara {
-	color: #eee;
-}
-
-.w3_testimonials_grids {
-	margin: 3em auto 0;
-	width: 80%;
-	text-align: center;
-}
-
-.w3_testimonials_grid p {
-	color: #fff;
-	line-height: 1.8;
-}
-
-.w3_testimonials_grid h5 {
-	font-weight: 700;
-	color: #fff;
-	font-size: 24px;
-}
-
-.agile-right-test p {
-	color: #ccc;
-}
-
-.w3_testimonials_grid img {
-	margin: 0 auto;
-}
-
-.w3_testimonials_grid {
-	padding-bottom: 4em;
-}
-
-.w3_testimonials_grid h4 i img {
-	margin: 0 10px !important;
-	box-shadow: none;
-}
-
-ul.testi-w3ls-rate li {
-	display: inline-block;
-}
-
-ul.testi-w3ls-rate li i {
-	color: #eac601;
-	font-size: 12px;
-}
-
-/* //testimonials */
 
 /* footer top */
 .footer-top {
