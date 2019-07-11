@@ -1,3 +1,5 @@
+<script src="/homepage_practice/js/backbone.js"></script>
+<script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
 <script src="/homepage_practice/js/jquery-2.2.3.min.js"></script>
 <!-- Default-JavaScript-File -->
 <script src="/homepage_practice/js/bootstrap.js"></script>
@@ -18,7 +20,6 @@
 		});
 	</script>
 <!-- //flexSlider (for testimonials) -->
-<script src="/homepage_practice/js/backbone.js"></script>
 <script src="/homepage_practice/js/underscore-min.js"></script>
 <script src="/homepage_practice/js/jquery.waypoints.min.js"></script>
 <script src="/homepage_practice/js/jquery.countup.js"></script>

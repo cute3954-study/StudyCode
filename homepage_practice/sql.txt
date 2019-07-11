@@ -1,6 +1,6 @@
 ﻿CREATE TABLE `userInfo` (
   `userSeq` int(11) NOT NULL AUTO_INCREMENT,
-`userBS` boolean NOT NULL,
+`userBS` varchar(10) NOT NULL,
   `userId` varchar(25) NOT NULL,
   `userPwd` varchar(25) NOT NULL,
   `userName` varchar(10) NOT NULL,

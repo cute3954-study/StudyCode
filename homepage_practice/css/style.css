@@ -418,6 +418,9 @@ input {
 	margin-bottom: 8px;
 }
 
+/* input[type=radio]{ */
+/* 	display: none; */
+/* } */
 .buyorsell {
 	width: 49%;
 	border: 1px solid #ff3b44;
@@ -427,8 +430,13 @@ input {
 	padding-top: 10px;
 }
 
-.buyorsell:HOVER, .buyorsell:FOCUS, .pwdVisible:HOVER, .btn-model:HOVER
-	{
+.buyorsell:HOVER, .pwdVisible:HOVER, .btn-model:HOVER {
+	background-color: #ff3b44;
+	border: 1px solid #ff3b44;
+	color: white;
+}
+
+.buyorsell:ACTIVE {
 	background-color: #ff3b44;
 	border: 1px solid #ff3b44;
 	color: white;
@@ -442,6 +450,10 @@ input {
 
 .inputWidth {
 	width: 69%;
+	display: inline;
+}
+.inputWidth-address {
+	width: 32%;
 	display: inline;
 }
 

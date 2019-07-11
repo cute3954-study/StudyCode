@@ -54,7 +54,7 @@ function show_reregion(res) {
 }
 $(document).ready(regionChange);
 
-// backbone.js 練習--------------------------
+/*// backbone.js 練習--------------------------
 (function($) {
 	var houseInformation = Backbone.Model.extend({
 		defaults:{
@@ -84,3 +84,4 @@ $(document).ready(regionChange);
 		template: $("#").html();
 	});
 })(jQuery);
+*/
