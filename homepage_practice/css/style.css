@@ -385,6 +385,9 @@ h3.title-w3ls {
 	font-size: 18px;
 	font-weight: 500;
 }
+.searchArea{
+	display: none;
+}
 
 .regionSelect {
 	padding-bottom: 20px;
@@ -464,6 +467,9 @@ input {
 #loginbtn, #registerbtn {
 	width: 100%;
 	padding: 10px 0;
+}
+.mypageForm{
+	padding: 70px 0;
 }
 
 /* //pricing */

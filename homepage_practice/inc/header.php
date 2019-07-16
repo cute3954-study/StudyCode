@@ -94,7 +94,7 @@
 							<?php
     if (isset($_SESSION['userId']) && isset($_SESSION['userName'])) {
         ?>
-								<li class="nav-item"><a class="nav-link" href="contact.html">マイページ</a></li>
+								<li class="nav-item"><a class="nav-link" href="/homepage_practice/mypage/mypage.php">マイページ</a></li>
 								<?php
     }
     ?>

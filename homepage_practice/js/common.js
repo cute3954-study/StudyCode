@@ -7,3 +7,9 @@ $('.closeBtn').click(
 			$('.msg').html("");
 		}
 );
+$(function(){
+$('#toSearch').click(
+		function() {
+			$('.searchArea').slideDown();
+		})
+});

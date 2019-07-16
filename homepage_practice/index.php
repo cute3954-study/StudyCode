@@ -125,7 +125,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/homepage_practice/inc/linkCSS.php';
 									<?php
         if (isset($_SESSION['userId']) && isset($_SESSION['userName'])) {
             ?>
-								<li class="nav-item"><a class="nav-link" href="contact.html">マイページ</a></li>
+								<li class="nav-item"><a class="nav-link" href="/homepage_practice/mypage/mypage.php">マイページ</a></li>
 								<?php
         }
         ?>
@@ -159,7 +159,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/homepage_practice/inc/register.php';
 	<!-- //banner -->
 
 	<!-- banner-bottom -->
-	<div class="serach-w3agile py-5" id="searchArea">
+	<div class="serach-w3agile py-5 searchArea" id="searchArea">
 		<div class="container py-xl-4 py-lg-3">
 			<h3 class="title-w3ls mb-md-5 mb-4 font-weight-bold"
 				id="selectRegionName" align="center">キーワードから探す - 全国</h3>
